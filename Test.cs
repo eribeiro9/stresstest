@@ -20,7 +20,7 @@ public class Test
 
             foreach (prime in primes)
             {
-                if (prime > iSwrt)
+                if (prime > iSqrt)
                     break;
                 else if (i % prime == 0)
                 {
