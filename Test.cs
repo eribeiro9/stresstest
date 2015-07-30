@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 public class Test
 {
@@ -36,6 +37,18 @@ public class Test
  
     public static void Main()
     {
-        // TODO: Run primesUnder(3000000) 5 times and print the time for each
+        List<long> times = new List<long>();
+        var stopwatch = new Stopwatch();
+        for (int i = 0; i < 5; i++)
+        {
+            stopwatch.Start();
+            List<int> result = PrimesUnder(3000000);
+            stopwatch.Stop();
+
+            times.Add(stopwatch.ElapsedMilliseconds);
+        }
+
+        for (var time in times)
+            Console.WriteLine(time);
     }
 }
