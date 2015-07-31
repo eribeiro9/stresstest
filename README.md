@@ -2,13 +2,13 @@
 Multi-lang stress test for Project Euler
 
 ### All done:
- - Python
  - C#
  - Java
+ - JavaScript
+ - Python
 
 ### Missing timing:
  - C++
- - Javascript
  - F#
 
 ### In Progress:
