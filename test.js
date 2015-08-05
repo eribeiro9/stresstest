@@ -1,5 +1,5 @@
 
-function primesUnder(var limit) {
+function primesUnder(limit) {
     if (limit <= 2) return []
 
     var primes = [2]

@@ -1,5 +1,5 @@
 
-import timeit
+from timeit import default_timer as timer
 import math
 
 
@@ -23,6 +23,10 @@ def primes_under(limit):
     return primes
 
 
-print(str(timeit.timeit("primes_under(3000000)",
-                        "from __main__ import primes_under",
-                        number=5)))
+times = list()
+for i in range(5):
+    start = timer()
+    results = primes_under(3000000)
+    end = timer()
+    times.append(end - start)
+print(str(times))

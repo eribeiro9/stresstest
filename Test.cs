@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 public class Test
 {
-    public List<int> PrimesUnder(int limit)
+    public static List<int> PrimesUnder(int limit)
     {
         if (limit <= 2)
             return new List<int>();
@@ -18,7 +18,7 @@ public class Test
             bool add = true;
             double iSqrt = Math.Sqrt(i);
 
-            foreach (prime in primes)
+            foreach (var prime in primes)
             {
                 if (prime > iSqrt)
                     break;
@@ -46,9 +46,10 @@ public class Test
             stopwatch.Stop();
 
             times.Add(stopwatch.ElapsedMilliseconds);
+			stopwatch.Reset();
         }
 
-        for (var time in times)
+        foreach (var time in times)
             Console.WriteLine(time);
     }
 }
